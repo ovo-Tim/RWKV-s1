@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+train-00000-of-00001.parquet
+json2binidx_tool
+jsonl_dataset.jsonl
