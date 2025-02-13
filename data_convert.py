@@ -11,7 +11,7 @@ jsonl_entries = []
 # Iterate over each row in the DataFrame and create the desired JSON format
 for index, row in df.iterrows():
     entry = {
-        "text": f"User: {row['question']}\n\nAssistant: <think>{row['gemini_thinking_trajectory']}</think> {row['gemini_attempt']}"
+        "text": f"User: {row['question'].replace('\n\n', '\n')}\n\nAssistant: <think>{row['gemini_thinking_trajectory'].replace('\n\n', '\n')}</think> {row['gemini_attempt'].replace('\n\n', '\n')}"
     }
     jsonl_entries.append(entry)
 
